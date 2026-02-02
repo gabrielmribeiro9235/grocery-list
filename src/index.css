@@ -20,3 +20,44 @@ header {
   padding: 10px;
   text-align: center;
 }
+
+form {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+label {
+  position: fixed;
+  left: -999999999px;
+}
+
+input {
+  font-size: xx-large;
+  outline: none;
+  border-radius: 5px;
+  text-indent: 2px;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  font-size: xx-large;
+  font-weight: bold;
+  color: blue;
+  background-color: white;
+  border-color: blue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: transparent;
+  color: white;
+  background-color: blue;
+}
+
+button:active {
+  transform: scale(0.94);
+}
