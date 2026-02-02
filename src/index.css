@@ -6,3 +6,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+header {
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;;
+}
+
+#headerTitle {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
