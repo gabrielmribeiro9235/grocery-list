@@ -1,7 +1,7 @@
-export default function Items({ ItemsList = [] }) {
+export default function Items({ itemsList }) {
     return(
         <main>
-            {ItemsList.length !== 0 ? ItemsList.map((item) => (
+            {itemsList.length !== 0 ? itemsList.map((item) => (
                 <div key={item.id} id={item.id}>
                     <label htmlFor="itemCheckbox">Item checkbox</label>
                     <input 

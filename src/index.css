@@ -82,3 +82,18 @@ main p {
   margin-top: 50px;
   font-size: large;
 }
+
+footer {
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;;
+}
+
+#footerTitle {
+  margin: 0;
+  padding: 10px;
+  font-weight: normal;
+  text-align: center;
+}
