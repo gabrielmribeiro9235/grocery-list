@@ -61,3 +61,13 @@ button:hover {
 button:active {
   transform: scale(0.94);
 }
+
+.SearchItem {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.SearchItem input {
+  width: 440px;
+}
