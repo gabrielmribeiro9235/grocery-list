@@ -7,11 +7,19 @@ import { useState } from "react";
 
 function App() {
   const [itemsList, setItemsList] = useState([]);
+  const addItem = (item) => {
+    const newItem = {
+      id: itemsList.length !== 0 ? itemsList[itemsList.length-1].id + 1 : 1,
+      item: item,
+      checked: false,
+    }
+    setItemsList([ ...itemsList, newItem]);
+  };
 
   return (
     <div className="App">
         <Header />
-        <AddItem />
+        <AddItem addItem={addItem} />
         <SearchItem />
         <Items itemsList={itemsList} />
         <Footer itemsList={itemsList} />

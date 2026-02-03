@@ -1,4 +1,13 @@
-export default function AddItem() {
+import { useRef } from "react";
+
+export default function AddItem({ addItem }) {
+    const item = useRef();
+    const handleSubmit = () => {
+        if(item.current && item.current.value) {
+            addItem(item.current.value);
+        }
+    };
+
     return(
         <form onSubmit={(e) => e.preventDefault()}>
             <label htmlFor="NewItem">Add new item</label>
@@ -10,8 +19,9 @@ export default function AddItem() {
                 autoComplete="off"
                 spellCheck="false"
                 placeholder="Add new item"
+                ref={item}
             />
-            <button className="addButton">+</button>
+            <button className="addButton" onClick={handleSubmit}>+</button>
         </form>
     );
 };
