@@ -71,3 +71,14 @@ button:active {
 .SearchItems input {
   width: 440px;
 }
+
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+main p {
+  margin-top: 50px;
+  font-size: large;
+}
