@@ -62,12 +62,12 @@ button:active {
   transform: scale(0.94);
 }
 
-.SearchItem {
+.SearchItems {
   margin-top: 10px;
   display: flex;
   justify-content: center;
 }
 
-.SearchItem input {
+.SearchItems input {
   width: 440px;
 }

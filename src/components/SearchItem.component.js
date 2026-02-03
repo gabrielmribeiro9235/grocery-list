@@ -1,6 +1,6 @@
 export default function SearchItem() {
     return(
-        <div className="SearchItem">
+        <div className="SearchItems">
             <label htmlFor="SearchItem">Search item</label>
             <input 
                 id="SearchItem"
