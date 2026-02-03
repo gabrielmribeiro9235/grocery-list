@@ -1,8 +1,10 @@
 export default function AddItem() {
     return(
         <form onSubmit={(e) => e.preventDefault()}>
-            <label>Add new item</label>
+            <label htmlFor="NewItem">Add new item</label>
             <input 
+                id="NewItem"
+                name="NewItem"
                 type="text" 
                 autoCapitalize="off"
                 autoComplete="off"
