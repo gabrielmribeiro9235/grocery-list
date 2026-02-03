@@ -1,3 +1,5 @@
+import { FaTrash } from "react-icons/fa";
+
 export default function SingleItem({ item }) {
     return (
         <div className="item" id={item.id}>
@@ -9,7 +11,9 @@ export default function SingleItem({ item }) {
                 checked={item.checked}
             />
             <p>{item.item}</p>
-            <button id="deleteButton"></button>
+            <button id="deleteButton">
+                <FaTrash size={18} />
+            </button>
         </div>
     );
 };
