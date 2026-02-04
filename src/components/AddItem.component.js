@@ -5,6 +5,7 @@ export default function AddItem({ addItem }) {
     const handleSubmit = () => {
         if(item.current && item.current.value) {
             addItem(item.current.value);
+            item.current.value = ""
         }
     };
 
