@@ -137,3 +137,9 @@ footer {
 .item button:active {
   transform: none;
 }
+
+.item input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
