@@ -15,13 +15,17 @@ function App() {
     }
     setItemsList([ ...itemsList, newItem]);
   };
+  const handleCheckboxChange = (id) => {
+    const newList = itemsList.map(item => item.id === id ? { ...item, checked: !item.checked } : item);
+    setItemsList(newList);
+  }
 
   return (
     <div className="App">
         <Header />
         <AddItem addItem={addItem} />
         <SearchItem />
-        <Items itemsList={itemsList} />
+        <Items handleCheckboxChange={handleCheckboxChange} itemsList={itemsList} />
         <Footer itemsList={itemsList} />
     </div>
   );

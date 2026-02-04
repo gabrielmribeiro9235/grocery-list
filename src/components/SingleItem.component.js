@@ -1,6 +1,6 @@
 import { FaTrash } from "react-icons/fa";
 
-export default function SingleItem({ item }) {
+export default function SingleItem({ handleCheckboxChange ,item }) {
     return (
         <div className="item" id={item.id}>
             <label htmlFor="itemCheckbox">Item checkbox</label>
@@ -9,8 +9,9 @@ export default function SingleItem({ item }) {
                 name="itemCheckbox"
                 type="checkbox"
                 checked={item.checked}
+                onChange={() => handleCheckboxChange(item.id)}
             />
-            <p>{item.item}</p>
+            {item.checked ? <p className="checkedItem">{item.item}</p> : <p>{item.item}</p>}
             <button id="deleteButton">
                 <FaTrash size={18} />
             </button>
