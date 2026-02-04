@@ -10,7 +10,10 @@ export default function AddItem({ addItem }) {
     };
 
     return(
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+        }}>
             <label htmlFor="NewItem">Add new item</label>
             <input 
                 id="NewItem"
@@ -22,7 +25,7 @@ export default function AddItem({ addItem }) {
                 placeholder="Add new item"
                 ref={item}
             />
-            <button className="addButton" onClick={handleSubmit}>+</button>
+            <button className="addButton">+</button>
         </form>
     );
 };
