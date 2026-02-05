@@ -7,6 +7,7 @@ import { useState } from "react";
 
 function App() {
   const [itemsList, setItemsList] = useState([]);
+  const [search, setSearch] = useState("");
   const addItem = (item) => {
     const newItem = {
       id: itemsList.length !== 0 ? itemsList[itemsList.length-1].id + 1 : 1,
@@ -28,8 +29,8 @@ function App() {
     <div className="App">
         <Header />
         <AddItem addItem={addItem} />
-        <SearchItem />
-        <Items handleCheckboxChange={handleCheckboxChange} handleDelete={handleDelete} itemsList={itemsList} />
+        <SearchItem setSearch={setSearch} />
+        <Items handleCheckboxChange={handleCheckboxChange} handleDelete={handleDelete} itemsList={itemsList} search={search} />
         <Footer itemsList={itemsList} />
     </div>
   );

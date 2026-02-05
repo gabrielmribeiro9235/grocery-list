@@ -1,4 +1,4 @@
-export default function SearchItem() {
+export default function SearchItem({ setSearch }) {
     return(
         <div className="SearchItems">
             <label htmlFor="SearchItem">Search item</label>
@@ -10,6 +10,9 @@ export default function SearchItem() {
                 autoComplete="off"
                 spellCheck="false"
                 placeholder="Search item"
+                onChange={(e) => {
+                    setSearch(e.target.value);
+                }}
             />
         </div>
     );
